@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>ATM</title>
         <meta name="description" content="Ancora Indonesia Resources" />
-        <link rel="icon" href="/images/logo/logo-small.png" />
+        <link rel="icon" href="/img/atm-master1.png" />
       </Head>
       <main className={lexend.className}>
       <NavMobile showNav={showNav} closeNav={closeNavhandler}/>
