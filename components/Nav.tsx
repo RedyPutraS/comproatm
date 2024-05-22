@@ -1,5 +1,6 @@
 import { Bars3CenterLeftIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface Props {
@@ -31,15 +32,15 @@ const Nav = ({openNav}:Props) => {
             <div className={`flex items-center ${heightNav} transition-all duration-700 lg:justify-center justify-between w-[80%] mx-auto`}>
                 <Image src={"/img/atm-master1.png"} alt="ATM-master.png" width={100} height={100} className="lg:hidden w-[80px] md:w-[110px]" />
                 <ul className={`${fontNav} transition-all duration-700 lg:flex hidden items-center space-x-10`}>
-                    <li><a className="nav__link" href="#">Home</a></li>
-                    <li><a className="nav__link" href="#">About Us</a></li>
-                    <li><a className="nav__link" href="#">Services & Projects</a></li>
-                    <li><a className="nav__link" href="#">Client</a></li>
-                    <li><a className="nav__link" href="#"><Image src={"/img/atm-master1.png"} alt="ATM-master.png" width={100} height={100} /></a></li>
-                    <li><a className="nav__link" href="#">Partners</a></li>
-                    <li><a className="nav__link" href="#">Career</a></li>
-                    <li><a className="nav__link" href="#">News & Info</a></li>
-                    <li><a className="nav__link" href="#">Contact us</a></li>
+                    <li><Link href={"/"} className="nav__link">Home</Link></li>
+                    <li><Link href={"/about"}className="nav__link">About Us</Link></li>
+                    <li><Link href={"services-projects"}className="nav__link">Services & Projects</Link></li>
+                    <li><Link href={"#"}className="nav__link">Client</Link></li>
+                    <li><Link href={"#"}className="nav__link"><Image src={"/img/atm-master1.png"} alt="ATM-master.png" width={100} height={100} /></Link></li>
+                    <li><Link href={"#"}className="nav__link">Partners</Link></li>
+                    <li><Link href={"#"}className="nav__link">Career</Link></li>
+                    <li><Link href={"#"}className="nav__link">News & Info</Link></li>
+                    <li><Link href={"#"}className="nav__link">Contact us</Link></li>
                 </ul>
                 <Bars3CenterLeftIcon onClick={openNav} className={`w-[2.3rem] lg:hidden h-[2.3rem] rotate-180 ${fontNav}`}/>
             </div>
