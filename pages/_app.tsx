@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import React, { useState } from "react";
 import { Lexend } from "next/font/google";
+import { useRouter } from 'next/router';
 const lexend = Lexend({
   subsets: ["latin"],
   display: "swap",
@@ -14,6 +15,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   const [showNav, setShowNav] = useState(false);
   const showNavhandler = () => setShowNav(true);
   const closeNavhandler = () => setShowNav(false);
@@ -34,7 +36,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NavMobile showNav={showNav} closeNav={closeNavhandler}/>
         <Nav openNav={showNavhandler}/>
         <Component {...pageProps} />
-        <Footer/>
+        {router.pathname !== '/newsinfo' && <Footer />}
+        {/* <Footer/> */}
       </main>
     </>
   );
