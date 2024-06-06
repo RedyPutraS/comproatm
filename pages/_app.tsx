@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>ATM</title>
+        <title>ATM Solutions IT</title>
         <meta name="description" content="Ancora Indonesia Resources" />
         <link rel="icon" href="/img/atm-master2.png" />
       </Head>
