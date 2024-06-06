@@ -7,7 +7,7 @@ const Career = () => {
     return (
         <div className="overflow-hidden">
             <HeroComponent 
-                text="Yes, We Are Hiring." 
+                text="Yes, We Are Hiring.." 
                 urlImage="/img/4.png" 
                 textButton="-" 
                 urlButton="#" 
