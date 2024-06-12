@@ -34,9 +34,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <main className={lexend.className}>
       <NavMobile showNav={showNav} closeNav={closeNavhandler}/>
-        <Nav openNav={showNavhandler}/>
+        {router.pathname !== '/compro-pdf' && <Nav openNav={showNavhandler}/>}
         <Component {...pageProps} />
-        {router.pathname !== '/newsinfo' && <Footer />}
+        {router.pathname !== '/newsinfo' && router.pathname !== '/compro-pdf' ? <Footer /> : ""}
         {/* <Footer/> */}
       </main>
     </>
