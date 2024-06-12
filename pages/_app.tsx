@@ -28,8 +28,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>ATM Solutions IT</title>
-        <meta name="description" content="Ancora Indonesia Resources" />
+        <title>ATM Digital Solutions</title>
+        <meta name="description" content="Artha Teknologi Mahakarya" />
         <link rel="icon" href="/img/atm-master2.png" />
       </Head>
       <main className={lexend.className}>
