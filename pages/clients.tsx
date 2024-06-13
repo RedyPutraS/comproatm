@@ -31,7 +31,7 @@ const Clients: React.FC = () => {
                 <p className="text-[15px] md:text-lg">Here are some of clients, be one of us! Let’s talk</p>
             </section> */}
 
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container text-center gap-2 my-2 mx-auto md:mx-auto">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container text-center gap-2 mx-auto md:mx-auto my-10 lg:my-20">
                 {[
                     { src: "/atm/1.png", title: "Kampus Kita", description: "Deskripsi gambar 1" },
                     { src: "/atm/2.png", title: "SGPP", description: "Deskripsi gambar 2" },
@@ -61,7 +61,7 @@ const Clients: React.FC = () => {
                                 height={1000}
                                 className="w-full h-full object-contain p-5 -mt-4"
                             />
-                            <div className="bg-black w-full text-white text-center absolute bottom-0 h-8">
+                            <div className="bg-hijau w-full text-white text-center absolute bottom-0 py-2 lg:py-1">
                                 <p>{item.title}</p>
                             </div>
                         </div>
