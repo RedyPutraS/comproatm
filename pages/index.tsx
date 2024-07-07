@@ -17,7 +17,7 @@ const HomePage = () => {
             </div>
             <div className="p-10 md:p-5 lg:p-0 flex flex-col justify-between lg:w-[40%]">
               <div>
-                  <span className="font-medium text-sm md:text-xl">At a Glance</span>
+                  <span className="font-medium text-sm md:text-xl">At a Glancea</span>
                   <h1 className="text-[20px] font-semibold md:text-[25px] lg:text-[20px] mt-2">Enterprice Business</h1>
                   <p className="text-[12px] md:text-[18px] py-1">Main Customers: Government, BUMN, and Public Companies</p>
                   <p className="text-[12px] md:text-[18px] py-1 mt-5">Key Initiatives:</p>
