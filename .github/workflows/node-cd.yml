@@ -21,8 +21,8 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd ../var/www/comproatm
+          cd ~/apps/comproatm
           git pull origin main
           git status
+          npm install --only=prod
           npm run build
-          pm2 restart comproATM
