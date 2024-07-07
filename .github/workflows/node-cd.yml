@@ -8,22 +8,25 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
-    - name: Debug SSH Connection
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
+
+    - name: Setup SSH key
       run: |
-        echo "Host: $HOST"
-        echo "Username: $USERNAME"
-        ssh -i ${{ secrets.PRIVATE_KEY }} $USERNAME@$HOST echo "SSH connection successful"
+        mkdir -p ~/.ssh
+        echo "${{ secrets.PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa-github-actions-nodejs
+        chmod 600 ~/.ssh/id_rsa-github-actions-nodejs
+
+    - name: Debug SSH Key
+      run: ls -al ~/.ssh
+
     - name: Deploy using ssh
-      uses: appleboy/ssh-action@v1.0.3
+      uses: appleboy/ssh-action@v1.1.0
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
+        key: ~/.ssh/id_rsa-github-actions-nodejs
         port: 22
         script: |
           cd ~/apps/comproatm
